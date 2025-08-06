@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:  
+    build: .
+    volumes:
+      - .:/django_comn
+    ports:
+      - 8080:8080
+    image: app:django_comn
+    container_name: djano_container
+
+    command: python manage.py runserver 0.0.0.0:8080
+    
